@@ -22,9 +22,6 @@ const mintAddress = new PublicKey(
 );
 const connection = new Connection(process.env.SOLANA_DEVNET_URL);
 const derivedAddresses = {
-  [Temperature.Backdoor]: new PublicKey(
-    "DLztTpYYS4zAsU3cS6iaXPesdyX9yseC3EAiRw138iYR"
-  ),
   [Temperature.Cool]: getAssociatedTokenAddressSync(
     mintAddress,
     getDerivedAddress(Temperature.Cool),
